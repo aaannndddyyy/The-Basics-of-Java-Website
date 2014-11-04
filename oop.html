@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>The Basics of Java - Object Orientated Programming</title>
+    <meta content="html5" name="description"><!--[if it IE9]>
+        <script src="http://html5shim.google.com/svn/trunk/html5-els.js?"> </script>
+        <![endif]-->
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+    <link href="http://base-art.net/faviconb.png" rel="icon" type="image/png">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+        </header>
+
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+
+                <li>
+                    <a href="syntax.html">The Syntax</a>
+                </li>
+
+
+                <li>
+                    <a href="insideJava.html">Inside Java</a>
+                </li>
+
+
+                <li>
+                    <a href="oop.html">Object Oriented Programming</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <article>
+            <section>
+                <h1>Object Orientated Programming</h1>
+
+
+                <p>The Definition: Object-oriented programming is a method of
+                programming based on a hierarchy of classes, and well-defined
+                and cooperating objects. Classes. A class is a structure that
+                defines the data and the methods to work on that data.</p>
+
+
+                <h3>There are 3 major components of object orientated
+                programming in java:</h3>
+                <br>
+                <br>
+
+
+                <div class="polaroid rotate_left">
+                    <img height="200" src=
+                    "http://faculty.orangecoastcollege.edu/sgilbert/book/11-3-Encapsulation/images/encapsulation.gif"
+                    width="350">
+
+                    <p class="caption">Encapsulation</p>
+                </div>
+
+
+                <p class="expl">Encapsulation is the technique of making the
+                fields in a class private and providing access to the fields
+                via public methods. If a field is declared private, it cannot
+                be accessed by anyone outside the class, thereby hiding the
+                fields within the class. For this reason, encapsulation is also
+                referred to as data hiding. Encapsulation can be described as a
+                protective barrier that prevents the code and data being
+                randomly accessed by other code defined outside the class.
+                Access to the data and code is tightly controlled by an
+                interface. The main benefit of encapsulation is the ability to
+                modify our implemented code without breaking the code of others
+                who use our code. With this feature Encapsulation gives
+                maintainability, flexibility and extensibility to our code. An
+                example below where we hide the name and age variable from
+                outside use and we create methods to access them instead of the
+                variable itself:</p>
+
+
+                <div style=
+                "height:300px;width:1800px;border:9px inset #00BFFF; #ccc; overflow-y:scroll;overflow-x:scroll; background-color:#CFCFCF;">
+                <code></code>
+
+                    <pre>
+<code>public class EncapTest{
+    private String name;
+    private int age;
+    
+    public int getAge(){
+        return age;
+    }
+                       
+    public String getName(){
+        return name;
+    }
+
+    public void setAge( int newAge){
+        age = newAge;
+    }
+
+    public void setName(String newName){
+        name = newName;
+    }
+}               </code>
+</pre>
+                </div>
+
+
+                <p>Inheritance is a mechanism wherein a new class is derived
+                from an existing class. In Java, classes may inherit or acquire
+                the properties and methods of other classes. A class derived
+                from another class is called a subclass, whereas the class from
+                which a subclass is derived is called a superclass. A subclass
+                can have only one superclass, whereas a superclass may have one
+                or more subclasses.</p>
+
+
+                <div class="polaroid as">
+                    <img height="200" src=
+                    "http://tutorials.jenkov.com/images/java/inheritance-1.png"
+                    width="300">
+
+                    <p class="caption">Inheritance</p>
+                </div>
+
+
+                <div style=
+                "height:300px;width:1800px;border:9px inset #00BFFF; #ccc; overflow-y:scroll;overflow-x:scroll; background-color:#CFCFCF;">
+                <code></code>
+
+                    <pre>
+<code>public class Animal{
+}
+
+public class Mammal extends Animal{
+}
+
+public class Reptile extends Animal{
+}
+
+public class Dog extends Mammal{
+}               </code>
+</pre>
+                </div>
+
+
+                <p>Polymorphism is the ability of an object to take on many
+                forms. The most common use of polymorphism in OOP occurs when a
+                parent class reference is used to refer to a child class
+                object.</p>
+
+
+                <div class="polaroid rotate_left">
+                    <img height="200" src=
+                    "http://cdn.guru99.com/images/uploads/2012/07/java-dynamic-polymorphism.jpg"
+                    width="400">
+
+                    <p class="caption">Polymorphism</p>
+                </div>
+
+
+                <div style=
+                "height:300px;width:1800px;border:9px inset #00BFFF; #ccc; overflow-y:scroll;overflow-x:scroll; background-color:#CFCFCF;">
+                <code></code>
+
+                    <pre>
+<code>public interface Vegetarian{}
+public class Animal{}
+public class Deer extends Animal implements Vegetarian{}
+                </code>
+</pre>
+                </div>
+            </section>
+        </article>
+        <br>
+        <br>
+
+
+        <footer>
+            <p>Some information was copied from: <a href=
+            "http://www.oracle.com" target=
+            "_blank">http://www.oracle.com</a></p>
+
+
+            <p><center>Website coded and founded by William Bryant &copy; Copywrite
+            2014</center></p>
+        </footer>
+    </div>
+</body>
+</html>
