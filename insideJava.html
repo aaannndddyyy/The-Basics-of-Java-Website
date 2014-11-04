@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>The Basics of Java - Inside Java</title>
+    <meta content="html5" name="description"><!--[if it IE9]>
+        <script src="http://html5shim.google.com/svn/trunk/html5-els.js?"> </script>
+        <![endif]-->
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
+    <link href="http://base-art.net/faviconb.png" rel="icon" type="image/png">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+        </header>
+
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+
+                <li>
+                    <a href="syntax.html">The Syntax</a>
+                </li>
+
+
+                <li>
+                    <a href="insideJava.html">Inside Java</a>
+                </li>
+
+
+                <li>
+                    <a href="oop.html">Object Oriented Programming</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <article>
+            <section>
+                <h3>The Java Virtual Machine</h3>
+
+
+                <p>Inside Java platform lies the Java Virtual Machine(JVM).
+                Most programming languages compile source code directly into
+                machine code, suitable for execution on a particular
+                microprocessor architecture. The difference with Java is that
+                it uses bytecode - a special type of machine code.</p>
+
+
+                <p>Java bytecode executes on a special type of microprocessor.
+                There wasn't a hardware implementation of this microprocessor
+                available when Java was first released. Instead, the processor
+                architecture is emulated by what is known as a <i>"virtual
+                machine"</i>. This virtual machine is an emulation of a real
+                Java processor - a machine within a machine. The only
+                difference is that the virtual machine isn't running on a CPU -
+                it is being emulated on the CPU of the host machine.</p>
+                <img src="Images/JVM1.png" width="600px">
+
+                <p>The Java Virtual Machine is responsible for interpreting
+                Java bytecode, and translating this into actions or operating
+                system calls. For example, a request to establish a socket
+                connection to a remote machine will involve an operating system
+                call. Different operating systems handle sockets in different
+                ways - but the programmer doesn't need to worry about such
+                details. It is the responsibility of the JVM to handle these
+                translations, so that the operating system and CPU architecture
+                on which Java software is running is completely irrelevant to
+                the developer.</p>
+                <img src="Images/javaTranslation.gif" width="600px">
+
+                <p>The Java Virtual Machine forms part of a large system, the
+                Java Runtime Environment (JRE). Each operating system and CPU
+                architecture requires a different JRE. The JRE comprises a set
+                of base classes, which are an implementation of the base Java
+                API, as well as a JVM. The portability of Java comes from
+                implementations on a variety of CPUs and architectures. Without
+                an available JRE for a given environment, it is impossible to
+                run Java software.</p>
+
+
+                <h3>Differences between JVM implementations</h3>
+
+
+                <p>Though implementations of Java Virtual Machines are designed
+                to be compatible, no two JVMs are exactly alike. For example,
+                garbage collection algorithms vary between one JVM and another,
+                so it becomes impossible to know exactly when memory will be
+                reclaimed. The thread scheduling algorithms are different
+                between one JVM and another (based in part on the underlying
+                operating system), so that it is impossible to accurately
+                predict when one thread will be executed over another.
+                Initially, this is a cause for concern from programmers new to
+                the Java language. However, it actually has very little
+                practical bearing on Java development. Such predictions are
+                often dangerous to make, as thread scheduling and memory usage
+                will vary between different hardware environments anyway. The
+                power of Java comes from not being specific about the operating
+                system and CPU architecture - to do so reduces the portability
+                of software.</p>
+
+
+                <h3>Summary</h3>
+
+
+                <p>The Java Virtual Machine provides a platform-independent way
+                of executing code, by abstracting the differences between
+                operating systems and CPU architectures. Java Runtime
+                Environments are available for a wide variety of hardware and
+                software combinations, making Java a very portable language.
+                Programmers can concentrate on writing software, without having
+                to be concerned with how or where it will run. The idea of
+                virtual machines is nothing new, but Java is the most widely
+                used virtual machine used today. Thanks to the JVM, the dream
+                of Write Once-Run Anywhere (WORA) software has become a
+                reality.</p>
+            </section>
+        </article>
+        <br>
+        <br>
+
+
+        <footer>
+            <p>Some information copied from: <a href=
+            "http://www.javacoffeebreak.com" target=
+            "_blank">http://www.javacoffeebreak.com</a></p>
+
+
+            <p><center>Website coded and founded by William Bryant &copy; Copywrite
+            2014</center></p>
+        </footer>
+    </div>
+</body>
+</html>
